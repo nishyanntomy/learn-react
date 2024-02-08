@@ -1,6 +1,6 @@
 ## Personal Information:
 
-Full Name: Enter Your Full Name
+Full Name: Nishy Ann Tomy
 
 ## Getting Started
 First, fork this repository and clone it to your local machine.
