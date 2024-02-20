@@ -7,17 +7,19 @@ const initialList = [
   { id: 2, title: 'Terracotta Army', seen: true },
 ];
 
+
 export default function BucketList() {
   const [myList, setMyList] = useState(initialList);
   const [yourList, setYourList] = useState(
-    initialList
+    [...initialList]
   );
 
   function handleToggleMyList(artworkId, nextSeen) {
     const tmpList = myList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
+      if (e.id === artworkId) {
+        return { ...e, seen: nextSeen }
+      }
+      else
         return e
     });
     setMyList(tmpList);
@@ -25,9 +27,10 @@ export default function BucketList() {
 
   function handleToggleYourList(artworkId, nextSeen) {
     const tmpList = yourList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
+      if (e.id === artworkId) {
+        return { ...e, seen: nextSeen }
+      }
+      else
         return e
     });
     setYourList(tmpList);
